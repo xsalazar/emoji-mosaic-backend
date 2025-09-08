@@ -50,7 +50,7 @@ export const handler = async (event, context) => {
 
         // If resulting image width isn't evenly divisible by 64, pad the right side to the nearest divisible whole number
         if (resizedWidth % 64 !== 0) {
-          padding = 64 - (resizedWidth % 64); // Number of pixels to make width evenly divisible by 64
+          var padding = 64 - (resizedWidth % 64); // Number of pixels to make width evenly divisible by 64
           resizedWidth += padding; // New width = old width + padding
 
           // Intermediate variable to write out to same location
@@ -85,7 +85,7 @@ export const handler = async (event, context) => {
 
         // If resulting image height isn't evenly divisible by 64, pad the bottom side to the nearest divisible whole number
         if (resizedHeight % 64 !== 0) {
-          padding = 64 - (resizedHeight % 64); // Number of pixels to make height evenly divisible by 64
+          var padding = 64 - (resizedHeight % 64); // Number of pixels to make height evenly divisible by 64
           resizedHeight += padding; // New height = old height + padding
 
           // Intermediate variable to write out to same location
@@ -116,7 +116,7 @@ export const handler = async (event, context) => {
 
         // If resulting image height isn't evenly divisible by 64, pad the bottom side to the nearest divisible whole number
         if (resizedWidth > resizedHeight && resizedHeight % 64 !== 0) {
-          padding = 64 - (resizedHeight % 64); // Number of pixels to make height evenly divisible by 64
+          var padding = 64 - (resizedHeight % 64); // Number of pixels to make height evenly divisible by 64
           resizedHeight += padding; // New height = old height + padding
 
           // Intermediate variable to write out to same location
@@ -132,7 +132,7 @@ export const handler = async (event, context) => {
         }
         // If resulting image width isn't evenly divisible by 64, pad the right side to the nearest divisible whole number
         else if (resizedHeight > resizedWidth && resizedWidth % 64 !== 0) {
-          padding = 64 - (resizedWidth % 64); // Number of pixels to make width evenly divisible by 64
+          var padding = 64 - (resizedWidth % 64); // Number of pixels to make width evenly divisible by 64
           resizedWidth += padding; // New width = old width + padding
 
           // Intermediate variable to write out to same location
