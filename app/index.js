@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 
 // Slack uses JUMBOMOJI for less than 23 emoji in one message, so we'll have either a (4x5) or a (5x4) mosaic
 // This requires padding either the bottom or the right hand side of the image, depending on which original dimension is longer to preserve landscape vs. portrait
-exports.handler = async (event, context) => {
+export const handler = async (event, context) => {
   console.log(JSON.stringify(event));
 
   if (event.body) {
