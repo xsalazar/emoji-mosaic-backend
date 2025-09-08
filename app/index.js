@@ -183,7 +183,9 @@ export const handler = async (event, context) => {
           },
         }),
       };
-    } catch {
+    } catch (e) {
+      console.log(JSON.stringify(e, ["name", "message", "stack"]));
+
       return {
         cookies: [],
         isBase64Encoded: false,
