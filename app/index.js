@@ -1,4 +1,4 @@
-const sharp = require("sharp");
+import sharp from "sharp";
 import { v4 as uuidv4 } from "uuid";
 
 // Slack uses JUMBOMOJI for less than 23 emoji in one message, so we'll have either a (4x5) or a (5x4) mosaic
