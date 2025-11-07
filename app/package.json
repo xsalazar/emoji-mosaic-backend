@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "module",
   "dependencies": {
-    "sharp": "^0.34.4",
+    "sharp": "^0.34.5",
     "uuid": "^13.0.0"
   }
 }
