@@ -23,7 +23,7 @@ export const handler = async (event, context) => {
       const originalWidth = size.width;
 
       console.log(
-        `Received image of (${originalWidth} x ${originalHeight}) (W x H)`
+        `Received image of (${originalWidth} x ${originalHeight}) (W x H)`,
       );
 
       // These will hold the resized values once manipulations and calculations are done
@@ -43,7 +43,7 @@ export const handler = async (event, context) => {
             .rotate()
             .resize(
               null, // width
-              resizedHeight // height
+              resizedHeight, // height
             )
             .toFile(fileLocation)
         ).width;
@@ -78,7 +78,7 @@ export const handler = async (event, context) => {
             .rotate()
             .resize(
               resizedWidth, // width
-              null // height
+              null, // height
             )
             .toFile(fileLocation)
         ).height;
@@ -107,7 +107,7 @@ export const handler = async (event, context) => {
           .rotate()
           .resize(
             originalWidth > originalHeight ? 64 * 4 : null, // width
-            originalWidth > originalHeight ? null : 64 * 4 // height
+            originalWidth > originalHeight ? null : 64 * 4, // height
           )
           .toFile(fileLocation);
 
@@ -149,7 +149,7 @@ export const handler = async (event, context) => {
       }
 
       console.log(
-        `Resized image to (${resizedWidth} x ${resizedHeight}) (W x H)`
+        `Resized image to (${resizedWidth} x ${resizedHeight}) (W x H)`,
       );
 
       // For each "block" of square 64-px height
